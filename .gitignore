@@ -33,3 +33,5 @@ myUserDataDir
 scripts/**/*
 
 .next
+
+src/firebase/config.json

@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 주의사항
 
-## Getting Started
+## 01. 의존성 설치
 
-First, run the development server:
+package.json에 있는 패키지 정의 부분(`dependencies`, `devDependencies`)을 복사해서 작업중인 프로젝트에 붙여넣으세요.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## 02. 차크라 설정
+
+`_app.tsx`에 있는 `Chakra UI 테마 설정` 부분을 복사해주세요. (`ChakraProvider`, `theme`)
+
+## 03. 파이어베이스 설정
+
+- 에디터에 이미지를 첨부했을때 Firebase Storage에 업로드 되게 하려면 파이어베이스 설정값이 필요합니다.
+- src/firebase/config.json에 각 프로젝트의 firebase 설정값을 넣어주세요.
+
+### 예시)
+
+```json
+{
+  "apiKey": "각 프로젝트에 맞는 설정값을 넣어주세요",
+  "authDomain": "각 프로젝트에 맞는 설정값을 넣어주세요",
+  "projectId": "각 프로젝트에 맞는 설정값을 넣어주세요",
+  "storageBucket": "각 프로젝트에 맞는 설정값을 넣어주세요",
+  "messagingSenderId": "각 프로젝트에 맞는 설정값을 넣어주세요",
+  "appId": "각 프로젝트에 맞는 설정값을 넣어주세요",
+  "measurementId": "각 프로젝트에 맞는 설정값을 넣어주세요"
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 컴포넌트 가이드
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+https://www.notion.so/simsimjae/a51dc942b05541eabfffe3c59e7929a6
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# 프로젝트 실행
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 컴포넌트 동작 확인은 yarn start 입력 후 http://localhost:3000에 접속해서 확인하세요.
